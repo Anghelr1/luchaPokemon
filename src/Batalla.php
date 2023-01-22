@@ -92,7 +92,7 @@ class Batalla extends Ataque
         }
         if ($pokemon2->getVida() <= 0) {
             print_r("El pokemon {$pokemon2->getNombre()} ha muerto\n");
-            print_r("El pokemon {$pokemon1->getNombre()} ha GANDADOOOO!!!\n");
+            print_r("El pokemon {$pokemon1->getNombre()} ha GANADADOOOO!!!\n");
             $this->setVFgame(true);
         }
     }
