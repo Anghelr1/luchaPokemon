@@ -1,0 +1,15 @@
+{
+    "name": "anghel/lucha-pokemon",
+    "autoload": {
+        "psr-4": {
+            "Anghel\\LuchaPokemon\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anghelr1",
+            "email": "anghelgr14@gmail.com"
+        }
+    ],
+    "require": {}
+}
