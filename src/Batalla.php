@@ -2,7 +2,7 @@
 
 namespace Anghel\LuchaPokemon;
 
-class Batalla extends Ataque
+class Batalla extends Ataque implements Saludo
 {
     private bool $VFgame = false;
 
@@ -25,6 +25,8 @@ class Batalla extends Ataque
 
     public function PvP(Pokemon $pokemon1, Pokemon $pokemon2)
     {
+        $this->saludo($pokemon1);
+        $this->saludo($pokemon2);
         while (!$this->isVFgame()) {
             $this->EstadoPokemonesPvP($pokemon1, $pokemon2);
             $ataquePokemon1 = random_int(1, 3);
@@ -110,6 +112,13 @@ class Batalla extends Ataque
         print_r("El pokemon {$agredido->getNombre()} tiene {$agredido->getVida()} de vida\n");
 
         $this->EstadoPokemonesPvP($agresor, $agredido);
+    }
+
+    public function saludo(Pokemon $pokemon)
+    {
+
+        print_r($pokemon->getNombre() . " ha salido a la batalla" . PHP_EOL);
+
     }
 
 }
